@@ -1,0 +1,93 @@
+apt update
+
+echo "Adding Second Line">> README.txt
+ 
+git status
+ 
+git add .   (Always use Git Add before commiting a file)
+git commit -m "Fixed Bugn 102"
+ 
+git log
+
+git show (displays content modified along with full history)
+git log -n 1 (to seach for specific commit)
+
+git log | tail -n 1 (for last commit)
+
+git log --online
+
+
+vi README.txt
+
+git status (for all rollback on repository)
+
+git stash
+
+git status
+
+
+git diff readme.txt (shows changes done, if no changes done then it returns nothing)
+
+git checkout readme.txt (for specific file rollback)
+
+To Rollback files after you commit them (i.e. it went to Repo)
+git reset --hard [Headname]
+
+CREATE NEW Development Branch in Parall:
+git log
+
+git branch -l
+
+git branch develop
+
+git diff develop
+
+git branch -l
+
+git checkout develop
+
+git branch -l
+
+echo "Adding Develop Branch Code Base" >> README.txt
+
+git status
+
+git add .
+
+git commit -m "Adding Develop Branch Code Base"
+
+cat README.txt
+
+git log
+
+git diff master
+
+history
+
+Merging the commit to Master Branch (our merging two branches)
+git branch -l
+
+git checkout master
+
+git log
+
+git merge develop
+
+git branch -D develop  (Deletes the branch) 
+
+Moving Codes to Web Repository (to enable code sharing)
+
+Anuj's Repositories:
+https://github.com/Anuj1990/devopsrepo
+https://github.com/Anuj1990?tab=repositories
+
+Command to push repositories:
+git remote -v
+
+git remote add origin https://github.com/Anuj1990/devopsrepo.git
+
+git remote -v
+
+git push origin master
+
+git push origin develop
